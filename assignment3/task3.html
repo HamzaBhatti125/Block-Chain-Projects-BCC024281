@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+   var colorNames = ["red","blue","green"]
+   document.write(colorNames + "<br>")
+   var options = +prompt(`Please select options
+    1. enter color in beginning
+    2. enter color in ending
+    3. enter two colors in beginning
+    4. delete color from beginning
+    5. delete color from ending
+    6. insert color in suitable index
+    7. delete color from suitable index
+   `)
+   if(options === 1){
+        var colorName = prompt("please enter color name")
+        colorNames.unshift(colorName)
+        document.write("updated color array: " +colorNames)
+   }
+   else if(options === 2){
+        var colorName = prompt("please enter color name")
+        colorNames.push(colorName)
+        document.write("updated color array: " +colorNames)
+   }
+   else if(options === 3){
+        var colorName1 = prompt("please enter first color name")
+        var colorName2 = prompt("please enter second color name")
+        colorNames.unshift(colorName1,colorName2)
+        document.write("updated color array: " +colorNames)
+   }
+   else if(options === 4){
+        colorNames.shift()
+        document.write("updated color array: " +colorNames)
+   }
+   else if(options === 5){
+        colorNames.pop()
+        document.write("updated color array: " +colorNames)
+   }
+   else if(options === 6){
+        var indexNo = +prompt("please enter index")
+        var colorName = prompt("please enter color name")
+        colorNames.splice(indexNo,0,colorName)
+        document.write("updated color array: " +colorNames)
+   }
+   else if(options === 7){
+        var indexNo = +prompt("please enter index")
+        var howMany = prompt("how many colors you want to delete")
+        colorNames.splice(indexNo,howMany)
+        document.write("updated color array: " +colorNames)
+   }
+   else {
+       alert("invalid options")
+   }
+
+</script>
+</html>

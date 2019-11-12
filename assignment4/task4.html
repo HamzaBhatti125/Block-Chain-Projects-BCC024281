@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+var inValid = false;
+var valid = false
+var email = prompt("Please enter email")
+// for(var i=0;i<email.length;i++){
+//     if(i ==0 && email.charCodeAt(0) == 64 ){
+//         alert("Invalid email")
+//     }
+//     else if( email.charCodeAt(i) == 64 ){
+
+//     }
+// }
+var test = 'hamza'
+var eng = /^[\w ]+$/
+console.log(email)
+ for(var i=0;i<4;i++){
+    if(email.charCodeAt(i) == 64 && email.charCodeAt(i) != eng){
+        inValid = true
+        test = 'hello'
+        break;
+    }
+ }
+// ah1234@yahoo.com
+for(var j=4;j<email.length;j++){
+    if(email.charCodeAt(j) == 64){
+        var dot = email.slice(j+1);
+        console.log(dot)
+        for(var k=0; k<dot.length; k++){
+            if(dot.charCodeAt(k) == 46){
+                valid = true
+                break;
+            }else{
+                valid = false
+                }
+        }
+    }
+}
+
+if(inValid == false && valid == true){
+    alert("Correct Email: "+ email)
+}else{
+    alert("InValid email")
+}
+
+console.log(test)
+console.log(eng)
+
+</script>
+</html>

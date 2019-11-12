@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var arr =[]
+for (var i=0;i<10;i++){
+    var int = Math.random()
+    var rand = Math.floor(int *10 + 1)
+    if(rand <= 6){
+        arr.push(rand)
+    }
+    
+}
+for(var j=0;j<arr.length;j++){
+    document.write("Random Dice value: "+ arr[j]+ "<br>")    
+}
+
+
+</script>
+</html>

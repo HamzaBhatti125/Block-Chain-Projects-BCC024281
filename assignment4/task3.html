@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    var notValid = false
+    var valid = false
+    var pass = prompt("Please Enter a password:")
+    if(pass.length !== 8){
+        notValid = true
+    }else{
+        for(var i=48;i<58;i++){
+            if(pass.charCodeAt(0) == i){
+                notValid = true
+                break;
+            }
+        }
+        for(var i=1; i<pass.length;i++){
+            for(var j=48;j<57;j++){
+                if(pass.charCodeAt(i) == j){
+                    valid = true;
+                    break;
+                }
+            }
+            if(valid){
+                break;
+            }
+        }
+    }
+    if(notValid == false && valid == true){
+        document.write("Your password is: "+ pass)
+    }else{
+        document.write("Invalid password")
+    }
+</script>
+</html>

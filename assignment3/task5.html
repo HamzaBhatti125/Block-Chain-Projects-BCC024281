@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    var array = [3,'a','a','a',2,3,'a',3,'a',2,4,9,3];
+    var array1 = [];
+    for( var i =0; i<array.length;i++){
+        var repeat = array[i];
+        if( array1.indexOf(repeat) === -1 ){
+            array1.push(repeat)
+        }
+        else{
+            continue;
+        }
+    }
+   document.write("first array is: "+ array+"<br>")
+   document.write("upated array is: " + array1)
+</script>
+</html>
