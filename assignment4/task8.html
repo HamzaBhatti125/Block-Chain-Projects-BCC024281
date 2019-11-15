@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var zero = 'zero';
+    var unit = ['','one','two','three','four','five','six','seven','eight','nine'];
+    var ten = ['','ten','twenty','thirty','fourty','fifty','sixty','seventy','eighty','ninety'];
+    
+    var num = parseInt(prompt("Please enter number: "));
+    if(num == NaN){
+        document.write(" Not a number")
+    }
+    else{
+    num = num.toString()
+    console.log(num)
+
+    if(num == "0"){
+        document.write("the number is: "+zero)
+    }
+    else if(num.length == 1){
+        document.write("the number is: "+unit[Number(num)])
+    }else if(num.length == 2 ){
+        num.split("")
+        document.write("the number is: "+ten[Number(num[0])]+" "+unit[Number(num[1])])
+    }else if(num.length == 3){
+        num.split("")
+        document.write("the number is: "+unit[Number(num[0])]+ " hundred and "+ten[Number(num[1])]+ unit[Number(num[2])])
+    }else if(num.length == 4){
+        num.split("")
+        document.write("the number is: "+unit[Number(num[0])]+ " thousand "+ unit[Number(num[1])] + " hundred and "+ ten[Number(num[2])]+ " "+ unit[Number(num[3])])
+    }else{
+        document.write("out of range")
+    }
+    }
+    
+
+    
+
+
+</script>
+</html>
