@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    function palind(word){
+    document.write("Given word: "+word+"<br>")
+    var testArray = []
+    var inputArray = word.split("")
+        for(var i=(inputArray.length - 1);i>=0;i-- ){
+            testArray.push(inputArray[i])
+        }
+        var testInput = testArray.join("")
+        if(word == testInput){
+            document.write("The given word is palindrome"+"<br>")
+        }else{
+            document.write("The word is not palindrome"+"<br>")
+        }
+    }
+
+    palind("maham")
+    palind("hamza")
+    palind("tibit")
+    palind("test")
+
+</script>
+</html>

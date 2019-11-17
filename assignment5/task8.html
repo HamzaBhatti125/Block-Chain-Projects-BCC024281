@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Age(date){
+        var inputAge = new Date(date);
+        var inputDay = inputAge.getTime();
+        var presentAge = new Date();
+        var presentDay = presentAge.getTime();
+        var diff = presentDay - inputDay
+        var years = Math.floor(diff/(1000 * 60 *60 *24 * 365))
+        // console.log("Years are "+years)
+        diff  = diff - (years *365 *24 *60 *60 *1000)
+        var months = Math.floor(diff/(1000 *60 *60 *24 *30))
+        diff  = diff - (months *30 *24 *60 *60 *1000)
+        var days = Math.floor(diff/(1000 *60 *60 *24))
+        diff = diff - (days *24 *60 *60 *1000 )
+        console.log("You are: "+years+" years "+months+" months and "+days+" days old")
+
+
+
+
+    }
+    Age("Aug 09, 1986")
+</script>
+</html>

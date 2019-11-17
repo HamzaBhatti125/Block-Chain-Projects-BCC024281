@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Amount(rs){
+        var hundred = 0
+        var fifty = 0
+        var ten = 0
+        if(rs % 10 != 0){
+            document.write("Please Enter Amount in multiples of 10","<br>")
+        }else{
+            if(rs >= 100){
+                hundred = Math.floor(rs/100)
+                rs = rs - (hundred *100)
+            }
+            if( rs >= 50){
+                fifty = Math.floor(rs/50)
+                rs = rs - (fifty *50)
+            }
+            if(rs >= 10){
+                ten = Math.floor(rs/10)
+                rs = rs - (ten * 10)
+            }
+            document.write("You will have "+hundred+" hundred notes "+fifty+" fifty notes and "+ten+" ten notes"+"<br>")
+            
+        }
+    }
+    Amount(475)
+    Amount(470)
+    Amount(70)
+    Amount(40)
+</script>
+</html>
